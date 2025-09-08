@@ -15,8 +15,6 @@
                 ?>
                 <h1><?= $hero['name']?></h1>
                 <?php
-            }else{
-                return "<p>Hero non trouvé</p>";
             }
         }
 

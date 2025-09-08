@@ -26,11 +26,11 @@
             'picture' => 'himari.jpg'
         ],
         [
-            'id' => '3',
+            'id' => '4',
             'name' => 'Kurumi',
             'magic_power' => 'contrôle du temps',
             'picture' => 'kurumi.webp'
-        ],
+        ]
     ];
     ?>
     
