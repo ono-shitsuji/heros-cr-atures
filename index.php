@@ -1,44 +1,31 @@
-<h1>test 1,2 </h1>
 <?php
- require_once 'partials/head.php';
-        require_once  'data.php';
-        foreach ($heros as $value){
-            ;
-        }
-    foreach($heros as $hint =>$value)    
-    require_once 'partials/footer.php';  
-        var_dump($heros);
-   $name = $heros[0]['name'];
-   echo "<p> $name </p>";
-
-    $name = $heros[0]['picture'];
-   echo "<p> $name </p>";
-
-      $name = $heros[1]['name'];
-   echo "<p> $name </p>";
-
-    $name = $heros[1]['picture'];
-   echo "<p> $name </p>";
-
-      $name = $heros[2]['name'];
-   echo "<p> $name </p>";
-
-    $name = $heros[2]['picture'];
-   echo "<p> $name </p>";
-
-      $name = $heros[3]['name'];
-   echo "<p> $name </p>";
-
-    $name = $heros[3]['picture'];
-   echo "<p> $name </p>";
-
-      $name = $heros[4]['name'];
-   echo "<p> $name </p>";
-
-    $name = $heros[4]['picture'];
-   echo "<p> $name </p>"
-
-    ?>
-    
-</body>
-</html>
+    require_once 'partials/head.php';
+    require_once 'data.php';
+    //var_dump($heros);
+?>
+    <h1>good evening and welcome</h1>
+    <div class="container-fluid my-5">
+        <div class="row justify-content-between">
+            <?php
+            if($heros){
+                foreach($heros as $value){
+                    //var_dump($value['name']);
+                    //var_dump($value['picture']);
+                    
+                    ?>
+                        <div style="width: 21rem;">
+                            <img class="card-img-top" src="public/img/<?= $value['picture'] ?>" alt="Image de <?php echo $value['name'] ?>">
+                            <h2><?= $value['name']?></h2>
+ <a href="hero.php?id=<?= $value['id']?>" class="btn btn-danger">if you want more bring out the fire +</a>
+                        </div>
+                    <?php
+                }
+            }else{
+                echo "<p>Aucun personnage disponible, ils sont tous en mission.</p>";
+            }   
+            ?>
+        </div>
+    </div>
+<?php
+    require_once 'partials/footer.php';
+?>
