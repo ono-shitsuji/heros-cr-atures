@@ -16,13 +16,16 @@
                             <img class="card-img-top" src="public/img/<?= $value['picture'] ?>" alt="Image de <?php echo $value['name'] ?>">
                             <h2><?= $value['name']?></h2>
                             <a href="hero.php?id=<?= $value['id']?>" class="btn btn-danger">if you want more bring out the fire +</a>
-                        </div>
+                            <form method="post" ></div>
                     <?php
                 }
             }else{
                 echo "<p>Aucun personnage disponible, ils sont tous en mission.</p>";
             }   
             ?>
+        </div>
+            <div class="row mt-5">
+        <div class="col-1"><a href="form.php" class="btn btn-warning ">Contact</a></div>            
         </div>
     </div>
 <?php

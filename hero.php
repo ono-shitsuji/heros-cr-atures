@@ -19,7 +19,18 @@
         $id = htmlspecialchars($_GET['id']);
                 $result = getHeros($id, $heros);
         //var_dump($result);
-        if($result !== NULL){
+        if($result !== NULL){?><div class="container">
+                    <h1><?= $result['name'] ?></h1>
+                    <div class="row">
+                        <div class="col">
+                            <img src="public/img/<?= $result['picture']?>" alt="Image de <?= $result['name']?>">
+                        </div>
+                        <div class="col">
+                            <h2 class="text-center mt-5"><?= $result['magic_power']?><h2>
+                        </div>
+                    </div>
+                </div>
+            <?php
             echo "<h1>" . $result['name'] . "</h1>";
         } else{
             echo "<h1>Aucun hero trouvé !</h1>";
@@ -29,5 +40,6 @@
     }else{
         echo "<p>Erreur</p>";
     };
+   
     
     require_once 'partials/footer.php';
