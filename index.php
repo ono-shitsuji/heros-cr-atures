@@ -10,8 +10,7 @@
             if($heros){
                 foreach($heros as $value){
                     //var_dump($value['name']);
-                    //var_dump($value['picture']);
-                    
+                    //var_dump($value['picture']);                    
                     ?>
                         <div style="width: 21rem;">
                             <img class="card-img-top" src="public/img/<?= $value['picture'] ?>" alt="Image de <?php echo $value['name'] ?>">
